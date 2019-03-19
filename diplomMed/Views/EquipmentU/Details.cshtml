@@ -1,0 +1,213 @@
+﻿@model diplomMed.Models.DetailViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Характеристики</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        @if (Model.Equip.Defs != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Manual)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Manual)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Auto)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Auto)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Synchr)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Synchr)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Voice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Voice)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Ekg)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Ekg)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Printer)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Printer)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.PulsOxx)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.PulsOxx)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Press)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Press)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Defs.Size)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Defs.Size)
+            </dd>
+        }
+
+        @if (Model.Equip.Ekgs != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ekgs.ConnectPc)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ekgs.ConnectPc)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ekgs.SignalProccesing)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ekgs.SignalProccesing)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ekgs.MemorySize)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ekgs.MemorySize)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ekgs.Size)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ekgs.Size)
+            </dd>
+
+        }
+        @if (Model.Equip.Ivls != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ivls.Time)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ivls.Time)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ivls.BatteryType)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ivls.BatteryType)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ivls.TimeCharging)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ivls.TimeCharging)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Ivls.WorkModes)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Ivls.WorkModes)
+            </dd>
+        }
+        @if (Model.Equip.Monitors != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Ekg)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Ekg)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Ad)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Ad)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Kapn)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Kapn)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Pulsoxxx)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Pulsoxxx)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Diagonal)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Diagonal)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Monitors.Resol)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Monitors.Resol)
+            </dd>
+        }
+        @if (Model.Equip.PulsOxxs != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.PulsOxxs.Memory)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.PulsOxxs.Memory)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.PulsOxxs.Display)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.PulsOxxs.Display)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.PulsOxxs.Batteries)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.PulsOxxs.Batteries)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.PulsOxxs.Battery)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.PulsOxxs.Battery)
+            </dd>
+
+        }
+        @if (Model.Equip.Stretchers != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Stretchers.WorkingCondition)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Stretchers.WorkingCondition)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Equip.Stretchers.FoldedCondition)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Equip.Stretchers.FoldedCondition)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    
+    <a class="btn btn-primary" href="@Model.retutnUrl">Back to List</a>
+</div>

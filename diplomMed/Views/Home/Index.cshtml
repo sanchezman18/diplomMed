@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Добро пожаловать</h2>
+<div>
+    <ul class="cat-content" >
+        <li >
+            <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="A"><img src="~/images/классА.jpg" width="300" height="280"  /></a>
+            <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="B"><h3>АСМП класса A</h3></a>
+        </li>
+        <li>
+            <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="B"> <img src="~/images/классБ.png" width="300" height="280" /></a>
+            <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="B"><h3>АСМП класса B</h3></a>
+        </li>
+        <li>
+            <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="C" ><img src="~/images/классС.png" width="300" height="280" /></a>
+           <a asp-controller="EquipmentU" asp-action="Index" asp-route-EquipType="Деффибрилятор" asp-route-defCateg="C"><h3>АСМП класса С</h3></a>
+        </li>
+    </ul>
+</div>

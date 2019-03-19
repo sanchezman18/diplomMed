@@ -1,0 +1,102 @@
+﻿@model diplomMed.Models.Equipment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Defs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @if(Model.Ekgs != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model=>model.Ekgs.ConnectPc)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model=>model.Ekgs.ConnectPc)
+             </dd>
+        }
+        @if (Model.Defs != null)
+        {
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Manual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Manual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Auto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Auto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Synchr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Synchr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Voice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Voice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Ekg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Ekg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Printer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Printer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.PulsOxx)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.PulsOxx)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Press)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Press)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Defs.Size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Defs.Size)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categ1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categ1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categ2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categ2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categ3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categ3)
+        </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

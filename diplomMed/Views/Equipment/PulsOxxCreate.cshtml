@@ -1,0 +1,52 @@
+﻿@model diplomMed.Models.PulsOxx
+
+@{
+    ViewData["Title"] = "PulsOxxCreate";
+}
+
+<h2>PulsOxxCreate</h2>
+
+<h4>PulsOxx</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PulsOxxCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Memory" class="control-label"></label>
+                <input asp-for="Memory" class="form-control" />
+                <span asp-validation-for="Memory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Display" class="control-label"></label>
+                <input asp-for="Display" class="form-control" />
+                <span asp-validation-for="Display" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Batteries" class="control-label"></label>
+                <input asp-for="Batteries" class="form-control" />
+                <span asp-validation-for="Batteries" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Battery" class="control-label"></label>
+                <input asp-for="Battery" class="form-control" />
+                <span asp-validation-for="Battery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EquipId" class="control-label"></label>
+                <select asp-for="EquipId" class ="form-control" asp-items="ViewBag.EquipId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
