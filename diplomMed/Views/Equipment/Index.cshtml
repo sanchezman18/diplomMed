@@ -9,13 +9,16 @@
 <p>
     <table class="table">
         <tr>
-   <th> <a asp-action="Create">Create New </a></th>
-  <th> <a asp-action="DefsCreate">Добавить деффибрилятор</a></th>
-  <th>  <a asp-action="EkgCreate">Добавить экг</a></th>
-  <th>  <a asp-action="IvlCreate">Добавить ИВЛ</a></th>
-  <th>  <a asp-action="MonitorCreate">Добавить Монитор</a></th>
-  <th>  <a asp-action="PulsOxxCreate">Добавить пульсоксиметр</a></th>
-            </tr>
+            <th> <a asp-action="Create">Create New </a></th>
+            <th> <a asp-action="DefsCreate">Добавить деффибрилятор</a></th>
+            <th>  <a asp-action="EkgCreate">Добавить экг</a></th>
+            <th>  <a asp-action="IvlCreate">Добавить ИВЛ</a></th>
+            <th>  <a asp-action="MonitorCreate">Добавить Монитор</a></th>
+            <th>  <a asp-action="PulsOxxCreate">Добавить пульсоксиметр</a></th>
+            <th><a asp-action="StretcherCreate">Добавить носилки</a></th>
+            <th><a asp-action="CreateReanim">Добавить набор</a></th>
+
+        </tr>
         </table>
 </p>
 <form asp-controller="Equipment" asp-action="Index" method="get">

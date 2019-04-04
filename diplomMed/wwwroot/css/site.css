@@ -41,3 +41,18 @@ body {
     list-style-type: none;
     margin-right: 50px;
 }
+
+.details-content dt {
+    float: left;
+    width: 230px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.details-content dd {
+
+    margin-left: 250px;
+}

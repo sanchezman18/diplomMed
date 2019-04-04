@@ -98,7 +98,7 @@ using diplomMed.Infrastructure;
             WriteLiteral("    ");
             EndContext();
             BeginContext(319, 230, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1ff5ffa1da84c7c8c83ed23f6386806", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92c509be9553456d92c15ce508dfa14e", async() => {
                 BeginContext(494, 51, true);
                 WriteLiteral("\r\n        <i class=\"fa fa-shopping-cart\"></i>\r\n    ");
                 EndContext();

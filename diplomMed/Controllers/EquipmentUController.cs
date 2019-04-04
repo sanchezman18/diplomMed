@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using diplomMed.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,13 +22,14 @@ namespace diplomMed.Controllers
             _context = context;
         }
 
-        
+
 
         public async Task<IActionResult> Index(string EquipType, string defCateg, string numOne, string numTwo, string defCountry)
         {
             IQueryable<string> countQuery = from c in _context.Equips
                                             orderby c.Country
                                             select c.Country;
+
             IQueryable<string> typeQuery = from t in _context.Equips
                                            orderby t.EquipType
                                            select t.EquipType;
@@ -42,7 +47,7 @@ namespace diplomMed.Controllers
             {
                 equipments = equipments.Where(x => x.Categ2 == true);
             }
-            if(defCateg == categ[2])
+            if (defCateg == categ[2])
             {
                 equipments = equipments.Where(x => x.Categ3 == true);
             }
@@ -61,7 +66,7 @@ namespace diplomMed.Controllers
             }
             if (!string.IsNullOrEmpty(EquipType))
             {
-                equipments = equipments.Where(z=>z.EquipType == EquipType);
+                equipments = equipments.Where(z => z.EquipType == EquipType);
 
             }
 
@@ -76,7 +81,9 @@ namespace diplomMed.Controllers
             return View(EquipH);
 
         }
-        public async Task<IActionResult> Details(int? id, string retutnURL)
+
+
+        public async Task<IActionResult> Details(int? id, string returnURL)
         {
             if (id == null)
             {
@@ -90,29 +97,66 @@ namespace diplomMed.Controllers
                 return NotFound();
             }
 
-            var dvm = new DetailViewModel
+            if (returnURL == null)
+            {
+                return NotFound();
+            }
+
+            return View(new DetailViewModel
             {
                 Equip = def,
-                retutnUrl = retutnURL
-        };
-            
+                returnURL = returnURL
+            }
+            );
 
-            return View(dvm);
+
+
         }
-     //   public async RedirectToActionResult Haract(int? id, string returnURL)
-     //   {
-    //         var def = await _context.Equips.Include(m => m.Defs).Include(m => m.Ekgs).Include(m => m.Ivls).Include(m => m.Monitors).Include(m => m.PulsOxxs).Include(m => m.Stretchers)
-   //              .FirstOrDefaultAsync(m => m.Id == id);
-   //     }
 
-   //     public ViewResult Details(string returnURL)
-   //     {
-    //        return View(new DetailViewModel
-     //       {
+        /////
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
-     //       }
-           //     );
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginModel model)
+        {
+
+            if (ModelState.IsValid)
+            {
+              //  User user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email && u.Password == model.Password);
+                if (model.Email=="sasha" && model.Password=="123456")
+                {
+                    await Authenticate(model.Email); // аутентификация
+
+                    return RedirectToAction("Index", "Equipment");
+                }
+                ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+            }
+            return View(model);
+        }
+    
+        private async Task Authenticate(string userName)
+        {
+            // создаем один claim
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
+            };
+            // создаем объект ClaimsIdentity
+            ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+            // установка аутентификационных куки
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
+        }
 
     }
 }

@@ -6,19 +6,21 @@
 
 <h2>Характеристики</h2>
 
-<div>
+<div >
     
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="details-content">
+        
         @if (Model.Equip.Defs != null)
         {
-            <dt>
+            
+            <dt >
                 @Html.DisplayNameFor(model => model.Equip.Defs.Manual)
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Equip.Defs.Manual)
             </dd>
-            <dt>
+            <dt >
                 @Html.DisplayNameFor(model => model.Equip.Defs.Auto)
             </dt>
             <dd>
@@ -66,6 +68,7 @@
             <dd>
                 @Html.DisplayFor(model => model.Equip.Defs.Size)
             </dd>
+      
         }
 
         @if (Model.Equip.Ekgs != null)
@@ -208,6 +211,9 @@
     </dl>
 </div>
 <div>
+   
+</div>
+<div>
     
-    <a class="btn btn-primary" href="@Model.retutnUrl">Back to List</a>
+    <a class="btn btn-primary" href="@Model.returnURL">Back to List</a>
 </div>

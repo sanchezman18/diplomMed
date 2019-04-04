@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using diplomMed.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace diplomMed.Controllers
 {
@@ -27,6 +28,7 @@ namespace diplomMed.Controllers
 
 
         // GET: Defs
+        [Authorize]
         public async Task<IActionResult> Index(string searchString, string defCountry, string numOne, string numTwo, string defCateg, string EquipType)
         {
 
@@ -222,7 +224,44 @@ namespace diplomMed.Controllers
             return View(puls);
         }
 
-        
+        public IActionResult StretcherCreate()
+        {
+            SelectList equips = new SelectList(_context.Equips, "Id", "Model");
+            ViewBag.EquipId = equips;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> StretcherCreate([Bind("Id,WorkingCondition,FoldedCondition")] Stretcher str)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(str);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(str);
+        }
+        public IActionResult ReanimCreate()
+        {
+            SelectList equips = new SelectList(_context.Equips, "Id", "Model");
+            ViewBag.EquipId = equips;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ReanimCreate([Bind("Id,List")] Stretcher str)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(str);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(str);
+        }
+
+
         // GET: Defs/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

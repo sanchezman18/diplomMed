@@ -358,7 +358,7 @@ using diplomMed.Models;
             WriteLiteral("    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(2610, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "14c995c4f45e4f0084ec127ec2a04183", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53ab2b32a069489c82eb24657f2c2f05", async() => {
                 BeginContext(2656, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -393,7 +393,7 @@ using diplomMed.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(2672, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4091a916fe0c47149975538e8d96eee3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb88f2fb0044ebeaa6b3e89d0328472", async() => {
                 BeginContext(2694, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

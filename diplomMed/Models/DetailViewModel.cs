@@ -8,6 +8,6 @@ namespace diplomMed.Models
     public class DetailViewModel
     {
        public Equipment Equip { get; set; }
-       public string retutnUrl { get; set; }
+       public string returnURL { get; set; }
     }
 }

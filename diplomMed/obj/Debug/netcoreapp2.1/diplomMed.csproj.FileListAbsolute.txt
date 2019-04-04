@@ -161,3 +161,5 @@ C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\diplomMe
 C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\diplomMed.csproj.CopyComplete
 C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
 C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CartSummary\Default.g.cshtml.cs
+C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\Razor\Views\Equipment\StretcherCreate.g.cshtml.cs
+C:\Users\sasha\source\repos\diplomMed\diplomMed\obj\Debug\netcoreapp2.1\Razor\Views\EquipmentU\Login.g.cshtml.cs
