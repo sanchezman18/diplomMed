@@ -10,8 +10,8 @@ using diplomMed.Models;
 namespace diplomMed.Migrations
 {
     [DbContext(typeof(diplomMedContext))]
-    [Migration("20190403204926_addTab")]
-    partial class addTab
+    [Migration("20190407144159_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -190,13 +190,14 @@ namespace diplomMed.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("EquipId");
+                    b.Property<string>("Description");
 
-                    b.Property<string>("List");
+                    b.Property<int>("EquipId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EquipId");
+                    b.HasIndex("EquipId")
+                        .IsUnique();
 
                     b.ToTable("Reanims");
                 });
@@ -219,21 +220,6 @@ namespace diplomMed.Migrations
                         .IsUnique();
 
                     b.ToTable("Stretchers");
-                });
-
-            modelBuilder.Entity("diplomMed.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Password");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("diplomMed.Models.Defs", b =>
@@ -279,8 +265,8 @@ namespace diplomMed.Migrations
             modelBuilder.Entity("diplomMed.Models.Reanim", b =>
                 {
                     b.HasOne("diplomMed.Models.Equipment", "Equip")
-                        .WithMany()
-                        .HasForeignKey("EquipId")
+                        .WithOne("Reanims")
+                        .HasForeignKey("diplomMed.Models.Reanim", "EquipId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

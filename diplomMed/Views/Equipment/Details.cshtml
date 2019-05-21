@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Характеристики</h2>
 
 <div>
-    <h4>Defs</h4>
+
     <hr />
     <dl class="dl-horizontal">
         @if(Model.Ekgs != null)
@@ -97,6 +97,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Изменить</a> |
+    <a asp-action="Index">Назад</a>
 </div>

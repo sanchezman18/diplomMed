@@ -1,0 +1,74 @@
+﻿@model diplomMed.Models.Defs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Defs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Defs" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Manual" class="control-label"></label>
+                <input asp-for="Manual" class="form-control" />
+                <span asp-validation-for="Manual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Auto" class="control-label"></label>
+                <input asp-for="Auto" class="form-control" />
+                <span asp-validation-for="Auto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Synchr" class="control-label"></label>
+                <input asp-for="Synchr" class="form-control" />
+                <span asp-validation-for="Synchr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Voice" class="control-label"></label>
+                <input asp-for="Voice" class="form-control" />
+                <span asp-validation-for="Voice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ekg" class="control-label"></label>
+                <input asp-for="Ekg" class="form-control" />
+                <span asp-validation-for="Ekg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Printer" class="control-label"></label>
+                <input asp-for="Printer" class="form-control" />
+                <span asp-validation-for="Printer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PulsOxx" class="control-label"></label>
+                <input asp-for="PulsOxx" class="form-control" />
+                <span asp-validation-for="PulsOxx" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Press" class="control-label"></label>
+                <input asp-for="Press" class="form-control" />
+                <span asp-validation-for="Press" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"></label>
+                <input asp-for="Size" class="form-control" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EquipId" class="control-label"></label>
+                <select asp-for="EquipId" class ="form-control" asp-items="ViewBag.EquipId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Defs" asp-action="Index">Назад</a>
+</div>
+

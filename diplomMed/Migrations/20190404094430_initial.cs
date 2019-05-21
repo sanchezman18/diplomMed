@@ -30,20 +30,6 @@ namespace diplomMed.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Email = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Defs",
                 columns: table => new
                 {
@@ -166,26 +152,6 @@ namespace diplomMed.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Reanims",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    List = table.Column<string>(nullable: true),
-                    EquipId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Reanims", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Reanims_Equips_EquipId",
-                        column: x => x.EquipId,
-                        principalTable: "Equips",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Stretchers",
                 columns: table => new
                 {
@@ -237,11 +203,6 @@ namespace diplomMed.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reanims_EquipId",
-                table: "Reanims",
-                column: "EquipId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Stretchers_EquipId",
                 table: "Stretchers",
                 column: "EquipId",
@@ -266,13 +227,7 @@ namespace diplomMed.Migrations
                 name: "PulsOxx");
 
             migrationBuilder.DropTable(
-                name: "Reanims");
-
-            migrationBuilder.DropTable(
                 name: "Stretchers");
-
-            migrationBuilder.DropTable(
-                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Equips");

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<diplomMed.Models.Defs>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<!--<p>
+    <a asp-controller="Defs" asp-action="Create">Create New</a>
+</p>-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Equip.Developer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equip.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Synchr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ekg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Printer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PulsOxx)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Press)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equip.Developer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equip.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Synchr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Voice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ekg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Printer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PulsOxx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Press)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <!--  <td>
+          Html.DisplayFor(modelItem => item.Equip.Id)
+      </td>-->
+           
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> 
+                <a asp-action="Details" asp-route-id="@item.Id">Характеристики</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

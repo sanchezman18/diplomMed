@@ -21,6 +21,11 @@ namespace diplomMed.Controllers
         {
             _context = context;
         }
+        private void Country(string EquipType, IQueryable<string> countQuery)
+        {
+
+
+        }
 
 
 
@@ -36,8 +41,12 @@ namespace diplomMed.Controllers
 
 
 
-            var equipments = from e in _context.Equips
+            var equipments = from e in _context.Equips.Include(d => d.Defs)
                              select e;
+            //var countries = from c in _context.Equips
+              //              orderby c.Country
+
+
             string[] categ = { "A", "B", "C" };
             if (defCateg == categ[0])
             {
@@ -52,6 +61,8 @@ namespace diplomMed.Controllers
                 equipments = equipments.Where(x => x.Categ3 == true);
             }
 
+
+
             if (!string.IsNullOrEmpty(defCountry))
             {
                 equipments = equipments.Where(x => x.Country == defCountry);
@@ -64,6 +75,19 @@ namespace diplomMed.Controllers
                 equipments = equipments.Where(y => y.Price >= dNumOne && y.Price <= dNumTwo);
 
             }
+
+            if (!string.IsNullOrEmpty(numOne))
+            {
+                decimal dNumOne = decimal.Parse(numOne);
+                equipments = equipments.Where(y => y.Price >= dNumOne);
+            }
+
+            if (!string.IsNullOrEmpty(numTwo))
+            {
+                decimal dNumTwo = decimal.Parse(numTwo);
+                equipments = equipments.Where(y => y.Price <= dNumTwo);
+            }
+
             if (!string.IsNullOrEmpty(EquipType))
             {
                 equipments = equipments.Where(z => z.EquipType == EquipType);
@@ -73,11 +97,15 @@ namespace diplomMed.Controllers
             var EquipH = new EquipmentViewModel
             {
                 Countries = new SelectList(await countQuery.Distinct().ToListAsync()),
+                //  Countries = new SelectList( ),
+
                 Categs = new SelectList(categ),
                 EquipTypes = new SelectList(await typeQuery.Distinct().ToListAsync()),
                 Equips = await equipments.ToListAsync()
+            //   Equips = null
 
             };
+
             return View(EquipH);
 
         }
@@ -128,7 +156,7 @@ namespace diplomMed.Controllers
             if (ModelState.IsValid)
             {
               //  User user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email && u.Password == model.Password);
-                if (model.Email=="sasha" && model.Password=="123456")
+                if (model.Email.Trim()=="sasha" && model.Password=="123456")
                 {
                     await Authenticate(model.Email); // аутентификация
 

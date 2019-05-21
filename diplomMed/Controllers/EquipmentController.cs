@@ -9,15 +9,14 @@ using diplomMed.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace diplomMed.Controllers
 {
-    public class EquipmentController : FirstController
+    public class EquipmentController : Controller
     {
         private readonly diplomMedContext _context;
         // private readonly List<Equipment> CartList = new List<Equipment>();
-
-        
 
         public EquipmentController(diplomMedContext context)
         {
@@ -43,18 +42,18 @@ namespace diplomMed.Controllers
                                            select t.EquipType;
             string[] categ = { "A", "B", "C" };
 
-            // if(defCateg==categ[0])
-            //{
-               // defibs = defibs.Where(z => z.Defs.Categ1== true);
-             //}
-          //   if(defCateg == categ[1])
-          //    {
-          //       defibs = defibs.Where(z => z.Categ2 == true);
-          //    }
-         //    if(defCateg == categ[2])
-         //    {
-        //         defibs = defibs.Where(z => z.Categ3 == true);
-          //   }
+             if(defCateg==categ[0])
+            {
+                defibs = defibs.Where(z => z.Categ1== true);
+             }
+             if(defCateg == categ[1])
+              {
+                 defibs = defibs.Where(z => z.Categ2 == true);
+              }
+            if(defCateg == categ[2])
+             {
+                 defibs = defibs.Where(z => z.Categ3 == true);
+             }
              
            
 
@@ -74,6 +73,20 @@ namespace diplomMed.Controllers
               defibs = defibs.Where(y => y.Price >= dNumOne && y.Price <= dNumTwo);
 
              }
+
+            if (!string.IsNullOrEmpty(numOne))
+            {
+                decimal dNumOne = decimal.Parse(numOne);
+                defibs = defibs.Where(y => y.Price >= dNumOne);
+            }
+
+            if(!string.IsNullOrEmpty(numTwo))
+            {
+                decimal dNumTwo = decimal.Parse(numTwo);
+                defibs = defibs.Where(y => y.Price <= dNumTwo);
+            }
+
+
             if (!string.IsNullOrEmpty(EquipType))
             {
                 defibs = defibs.Where(z => z.EquipType == EquipType);
@@ -114,10 +127,7 @@ namespace diplomMed.Controllers
                 Equipment def = new Equipment();
                 def.Getter(defH);
                 byte[] imageData = null;
-             //  using(var br = new BinaryReader(defH.Photo.OpenReadStream()))
-              //  {
-               //     imageData = br.ReadBytes((int)defH.Photo.Length);
-               // }
+           
                using (var binaryReader = new BinaryReader(defH.Photo.OpenReadStream()))
                 {
                     imageData = binaryReader.ReadBytes((int)defH.Photo.Length);
@@ -242,24 +252,7 @@ namespace diplomMed.Controllers
             }
             return View(str);
         }
-        public IActionResult ReanimCreate()
-        {
-            SelectList equips = new SelectList(_context.Equips, "Id", "Model");
-            ViewBag.EquipId = equips;
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ReanimCreate([Bind("Id,List")] Stretcher str)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(str);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(str);
-        }
+       
 
 
         // GET: Defs/Edit/5
@@ -270,7 +263,12 @@ namespace diplomMed.Controllers
                 return NotFound();
             }
 
-            var defs = await _context.Equips.FindAsync(id);
+            //  var defs = await _context.Equips.FindAsync(id);
+            
+            var defs = await _context.Equips.
+                FirstOrDefaultAsync(f => f.Id == id);
+          
+
             if (defs == null)
             {
                 return NotFound();
@@ -281,9 +279,45 @@ namespace diplomMed.Controllers
         // POST: Defs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Photo,Developer,Model,Country,Manual,Auto,Synchr,Voice,Ekg,Printer,PulsOxx,Press,Size,Price")] Equipment defs)
+        public async Task<IActionResult> EditPost(int? id,IFormFile file)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+                var equipsToUpate = await _context.Equips.FirstOrDefaultAsync(s => s.Id == id);
+                if (await TryUpdateModelAsync<Equipment>(
+                    equipsToUpate, "", s => s.EquipType, s => s.Developer, s => s.Model, s => s.Country, s => s.Price, s => s.Categ1, s => s.Categ2, s => s.Categ3
+
+
+                    ))
+                {
+                    try
+                    {
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    catch (DbUpdateException)
+                    {
+                        ModelState.AddModelError("", "Unable to save changes");
+                    }
+                }
+          
+            else if(file != null) {
+                
+            }
+            return View(equipsToUpate);
+        }
+        
+
+        // public async Task<IActionResult> Edit(int id,[Bind("Id,Photo,Developer,Model,Country,Manual,Auto,Synchr,Voice,Ekg,Printer,PulsOxx,Press,Size,Price")] Equipment defs)
+      //  public async Task<IActionResult> Edit(int id, string Dev, string Model, string Country, decimal Price, string Manual )
+
+      /* public async Task<IActionResult> Edit(int id, [Bind("Id,EquipType,Photo,Developer,Model,Country,Press,Size,Price,Categ1,Categ2,Categ3")]Equipment defs)
         {
             if (id != defs.Id)
             {
@@ -294,7 +328,9 @@ namespace diplomMed.Controllers
             {
                 try
                 {
+                    
                     _context.Update(defs);
+                 
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -311,7 +347,9 @@ namespace diplomMed.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(defs);
-        }
+        }*/
+
+     
 
         // GET: Defs/Delete/5
         public async Task<IActionResult> Delete(int? id)

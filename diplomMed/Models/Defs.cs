@@ -33,7 +33,7 @@ namespace diplomMed.Models
          [Display(Name ="Функция измерения давления")]
          public string Press { get; set; }
 
-         [Display(Name ="Габариты")]
+         [Display(Name ="Габариты (мм)")]
          public string Size { get; set; }
 
 

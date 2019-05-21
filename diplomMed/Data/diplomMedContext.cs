@@ -12,7 +12,7 @@ namespace diplomMed.Models
         public diplomMedContext (DbContextOptions<diplomMedContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+           // Database.EnsureCreated();
         }
 
         public DbSet<diplomMed.Models.Equipment> Equips { get; set; }
@@ -22,9 +22,11 @@ namespace diplomMed.Models
         public DbSet<diplomMed.Models.Monitor> Monitors { get; set; }
         public DbSet<diplomMed.Models.Stretcher> Stretchers { get; set; }
         public DbSet<diplomMed.Models.PulsOxx> PulsOxx { get; set; }
-        public DbSet<diplomMed.Models.User> Users { get; set; }
         public DbSet<diplomMed.Models.Reanim> Reanims { get; set; }
+      
 
 
     }
+
+    
 }

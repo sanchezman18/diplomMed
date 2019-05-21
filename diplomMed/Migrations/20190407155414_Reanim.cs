@@ -2,7 +2,7 @@
 
 namespace diplomMed.Migrations
 {
-    public partial class addTab : Migration
+    public partial class Reanim : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,0 +1,36 @@
+﻿@model diplomMed.Models.Stretcher
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stretcher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkingCondition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkingCondition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FoldedCondition)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FoldedCondition)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Equip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Equip.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,48 @@
+﻿@model diplomMed.Models.PulsOxx
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PulsOxx</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Memory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Memory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Display)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Display)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Batteries)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Batteries)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Equip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Equip.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

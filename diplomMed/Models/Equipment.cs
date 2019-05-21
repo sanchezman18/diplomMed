@@ -12,7 +12,7 @@ namespace diplomMed.Models
         
 
         public int Id { get; set; }
-        [Display(Name ="Тип прибора")]
+        [Display(Name ="Вид оборудования")]
         public string EquipType { get; set; }
         [Display(Name ="Фото")]
         public byte[] Photo { get; set; }
@@ -53,11 +53,15 @@ namespace diplomMed.Models
       //  [Display(Name ="Габариты")]
         //public string Size { get; set; }
 
-        [Display(Name ="Цена")]
+        [Display(Name ="Цена (Рублей)")]
+        [RegularExpression(@"[0-9]*$", ErrorMessage ="Неправильно заполнено поле")]
         public decimal Price { get; set; }
 
+       [Display(Name ="Класс 1")]
        public bool Categ1 { get; set; }
+       [Display(Name ="Класс 2")]
        public bool Categ2 { get; set; }
+       [Display(Name ="Класс 3")]
        public bool Categ3 { get; set; }
 
        public Defs Defs { get; set;}
@@ -66,6 +70,7 @@ namespace diplomMed.Models
        public Monitor Monitors { get; set; }
        public Stretcher Stretchers { get; set; }
        public PulsOxx PulsOxxs { get; set; }
+        public Reanim Reanims { get; set; }
 
        
 

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<diplomMed.Models.Monitor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<!--<p>
+    <a asp-action="Create">Create New</a>
+</p>-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ekg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kapn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pulsoxxx)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagonal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equip)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ekg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kapn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pulsoxxx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equip.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Характеристики</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

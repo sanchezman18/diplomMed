@@ -71,7 +71,7 @@
       
         }
 
-        @if (Model.Equip.Ekgs != null)
+        else if (Model.Equip.Ekgs != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.Ekgs.ConnectPc)
@@ -99,7 +99,7 @@
             </dd>
 
         }
-        @if (Model.Equip.Ivls != null)
+        else if (Model.Equip.Ivls != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.Ivls.Time)
@@ -126,7 +126,7 @@
                 @Html.DisplayFor(model => model.Equip.Ivls.WorkModes)
             </dd>
         }
-        @if (Model.Equip.Monitors != null)
+        else if (Model.Equip.Monitors != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.Monitors.Ekg)
@@ -165,7 +165,7 @@
                 @Html.DisplayFor(model => model.Equip.Monitors.Resol)
             </dd>
         }
-        @if (Model.Equip.PulsOxxs != null)
+        else if (Model.Equip.PulsOxxs != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.PulsOxxs.Memory)
@@ -193,7 +193,7 @@
             </dd>
 
         }
-        @if (Model.Equip.Stretchers != null)
+       else if  (Model.Equip.Stretchers != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.Stretchers.WorkingCondition)
@@ -208,6 +208,42 @@
                 @Html.DisplayFor(model => model.Equip.Stretchers.FoldedCondition)
             </dd>
         }
+        else
+        {   
+           <dt>Комплект дыхательный</dt>
+           <dd>1 коплект</dd>
+           <dt>Комплект вохдуховодов</dt>
+           <dd>1 комлект(не менее 3 шт., разных размеров)</dd>
+           <dt>Ларингоскоп</dt>
+           <dd>1 шт.</dd>
+           <dt>Трубка эндотрахеальня</dt>   
+           <dd>3 шт.</dd>
+           <dt>Стилет для интубации</dt>
+           <dd>2 шт</dd>
+           <dt>Роторасширитель</dt>
+           <dd>1 шт.</dd>
+           <dt>Языкодержатель</dt>
+           <dd>1 шт.</dd>
+           <dt>Зажим кровоостанавливающий</dt>
+           <dd>2 шт.</dd>
+           <dt>Зонд желудочный</dt>
+           <dd>1 шт.</dd>
+           <dt>Бинт Марлевый </dt>
+           <dd>2 шт. (10 см)</dd>
+           <dt>Салфетки марлевые</dt>
+           <dd>2 упаковки (16см х 14см)</dd>
+           <dt>Жгут кровоостанавливающий</dt>
+           <dd>1 шт.</dd>
+           <dt>Шприц типа Жане</dt>
+           <dd>1 шт.</dd>
+           <dt>Канюля для вен</dt>
+           <dd>4 шт.</dd>
+           <dt>Жгут для инъекций</dt>
+           <dd>2 шт.</dd>
+            
+        }
+
+
     </dl>
 </div>
 <div>
@@ -215,5 +251,5 @@
 </div>
 <div>
     
-    <a class="btn btn-primary" href="@Model.returnURL">Back to List</a>
+    <a class="btn btn-primary" href="@Model.returnURL">Назад</a>
 </div>

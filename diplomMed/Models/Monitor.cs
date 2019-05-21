@@ -13,7 +13,7 @@ namespace diplomMed.Models
         public string Ekg { get; set; }
         [Display(Name ="Измерение артериального давления")]
         public string Ad { get; set; }
-        [Display(Name ="Измерение капномктрии")]
+        [Display(Name ="Измерение капнометрии")]
         public string Kapn { get; set; }
         [Display(Name ="Измерение пульсоксиметрия")]
         public string Pulsoxxx { get; set; }

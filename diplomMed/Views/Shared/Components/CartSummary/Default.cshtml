@@ -4,8 +4,8 @@
     @if (Model.Lines.Count()>0)
     {
         <small class="navbar-text navbar-btn">
-            <b>Your cart:</b>
-            @Model.Lines.Sum(x => x.Quentity) item(s)
+            <b>В вашем списке</b>
+            @Model.Lines.Sum(x => x.Quentity) приборов
             @Model.ComputeTotalValue().ToString("c")
         </small>
     }

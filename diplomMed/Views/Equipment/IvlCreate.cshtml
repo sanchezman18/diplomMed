@@ -4,9 +4,9 @@
     ViewData["Title"] = "IvlCreate";
 }
 
-<h2>IvlCreate</h2>
+<h2>Параметры ИВЛ</h2>
 
-<h4>Ivl</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -37,14 +37,14 @@
                 <select asp-for="EquipId" class ="form-control" asp-items="ViewBag.EquipId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Добавить параметры" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

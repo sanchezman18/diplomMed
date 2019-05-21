@@ -4,9 +4,9 @@
     ViewData["Title"] = "MonitorCreate";
 }
 
-<h2>MonitorCreate</h2>
+<h2>Параметры монитора</h2>
 
-<h4>Monitor</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -47,14 +47,14 @@
                 <select asp-for="EquipId" class ="form-control" asp-items="ViewBag.EquipId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Добавить парамтры" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

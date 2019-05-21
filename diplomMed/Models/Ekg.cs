@@ -16,7 +16,7 @@ namespace diplomMed.Models
         public string SignalProccesing { get; set; }
         [Display(Name ="Объем памяти ")]
         public string MemorySize { get; set; }
-        [Display(Name ="Габариты")]
+        [Display(Name ="Габариты (мм)")]
         public string Size { get; set; }
        // [Display(Name ="Наличие удаленного доступа")]
 

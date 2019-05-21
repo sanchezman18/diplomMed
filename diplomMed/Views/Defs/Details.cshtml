@@ -1,0 +1,78 @@
+﻿@model diplomMed.Models.Defs
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Defs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Manual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Manual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Auto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Auto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Synchr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Synchr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Voice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Voice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ekg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ekg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Printer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Printer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PulsOxx)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PulsOxx)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Press)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Press)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Equip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Equip.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Изменить</a> |
+    <a asp-action="Index">Назад</a>
+</div>

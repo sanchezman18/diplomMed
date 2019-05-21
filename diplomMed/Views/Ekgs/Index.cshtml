@@ -1,0 +1,68 @@
+﻿@model IEnumerable<diplomMed.Models.Ekg>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<!--<p>
+    <a asp-action="Create">Create New</a>
+</p>-->
+<table class="table">
+    <thead>
+
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Equip.Developer)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Equip.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConnectPc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SignalProccesing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemorySize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equip.Developer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equip.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectPc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignalProccesing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemorySize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+           
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Характеристики</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,61 @@
+﻿@model diplomMed.Models.Monitor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Monitor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Ekg" class="control-label"></label>
+                <input asp-for="Ekg" class="form-control" />
+                <span asp-validation-for="Ekg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kapn" class="control-label"></label>
+                <input asp-for="Kapn" class="form-control" />
+                <span asp-validation-for="Kapn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pulsoxxx" class="control-label"></label>
+                <input asp-for="Pulsoxxx" class="form-control" />
+                <span asp-validation-for="Pulsoxxx" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diagonal" class="control-label"></label>
+                <input asp-for="Diagonal" class="form-control" />
+                <span asp-validation-for="Diagonal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resol" class="control-label"></label>
+                <input asp-for="Resol" class="form-control" />
+                <span asp-validation-for="Resol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EquipId" class="control-label"></label>
+                <select asp-for="EquipId" class="form-control" asp-items="ViewBag.EquipId"></select>
+                <span asp-validation-for="EquipId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

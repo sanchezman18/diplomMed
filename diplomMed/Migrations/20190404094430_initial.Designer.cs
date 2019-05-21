@@ -10,7 +10,7 @@ using diplomMed.Models;
 namespace diplomMed.Migrations
 {
     [DbContext(typeof(diplomMedContext))]
-    [Migration("20190403203540_initial")]
+    [Migration("20190404094430_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -184,23 +184,6 @@ namespace diplomMed.Migrations
                     b.ToTable("PulsOxx");
                 });
 
-            modelBuilder.Entity("diplomMed.Models.Reanim", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("EquipId");
-
-                    b.Property<string>("List");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EquipId");
-
-                    b.ToTable("Reanims");
-                });
-
             modelBuilder.Entity("diplomMed.Models.Stretcher", b =>
                 {
                     b.Property<int>("Id")
@@ -219,21 +202,6 @@ namespace diplomMed.Migrations
                         .IsUnique();
 
                     b.ToTable("Stretchers");
-                });
-
-            modelBuilder.Entity("diplomMed.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Password");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("diplomMed.Models.Defs", b =>
@@ -273,14 +241,6 @@ namespace diplomMed.Migrations
                     b.HasOne("diplomMed.Models.Equipment", "Equip")
                         .WithOne("PulsOxxs")
                         .HasForeignKey("diplomMed.Models.PulsOxx", "EquipId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("diplomMed.Models.Reanim", b =>
-                {
-                    b.HasOne("diplomMed.Models.Equipment", "Equip")
-                        .WithMany()
-                        .HasForeignKey("EquipId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

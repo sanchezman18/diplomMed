@@ -17,7 +17,7 @@ namespace diplomMed.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Описание дипломного проекта.";
+            ViewData["Message"] = "Описание дипломной работы.";
 
             return View();
         }

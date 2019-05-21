@@ -9,9 +9,9 @@ namespace diplomMed.Models
     public class Stretcher
     {
         public int Id { get; set; }
-        [Display(Name = "Разложенное состояние")]
+        [Display(Name = "Разложенное состояние (мм)")]
         public string WorkingCondition { get; set; }
-        [Display(Name = "Сложенное состояние")]
+        [Display(Name = "Сложенное состояние (мм)")]
         public string FoldedCondition { get; set; }
 
         public int EquipId { get; set; }

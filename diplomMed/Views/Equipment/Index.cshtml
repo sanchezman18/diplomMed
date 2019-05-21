@@ -4,32 +4,43 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<!--<h2>Index</h2>-->
 
 <p>
     <table class="table">
-        <tr>
-            <th> <a asp-action="Create">Create New </a></th>
+        <tr >
+            <th> <a asp-action="Create">Добавить прибор </a></th>
             <th> <a asp-action="DefsCreate">Добавить деффибрилятор</a></th>
             <th>  <a asp-action="EkgCreate">Добавить экг</a></th>
             <th>  <a asp-action="IvlCreate">Добавить ИВЛ</a></th>
             <th>  <a asp-action="MonitorCreate">Добавить Монитор</a></th>
             <th>  <a asp-action="PulsOxxCreate">Добавить пульсоксиметр</a></th>
             <th><a asp-action="StretcherCreate">Добавить носилки</a></th>
-            <th><a asp-action="CreateReanim">Добавить набор</a></th>
+        <!---    <th><a asp-action="ReanimCreate">Добавить набор</a></th>-->
 
         </tr>
         </table>
+    <table class="table">
+        Параметры
+        <tr>
+           <th><a asp-controller="Defs" asp-action="Index"> Параметры дефибрилляторов</a></th>
+            <th><a asp-controller="Ekgs" asp-action="Index">Параметры экг </a></th>
+            <th><a asp-controller="Ivls" asp-action="Index">Параметры ИВЛ</a></th>
+            <th><a asp-controller="Monitors" asp-action="Index">Параметры мониторов</a></th>
+            <th><a asp-controller="PulsOxxes" asp-action="Index">Параметры пульсоксиметров</a> </th>
+            <th><a asp-controller="Stretchers" asp-action="Index">Параметры носилок</a>
+        </tr>
+    </table>
 </p>
 <form asp-controller="Equipment" asp-action="Index" method="get">
     <p>
         Страна производства: <select asp-for="DefCountry" asp-items="Model.Countries">
             <option value="">Все</option>
         </select>
-        Тип прибора: <select asp-for="EquipType" asp-items="Model.EquipTypes">
+        Вид прибора: <select asp-for="EquipType" asp-items="Model.EquipTypes">
             <option value=""></option>
         </select>
-        Категория АСМП: <select asp-for="defCateg" asp-items="Model.Categs">
+        Класс АСМП: <select asp-for="defCateg" asp-items="Model.Categs">
             <option value=""></option>
         </select>
 
@@ -91,9 +102,9 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Характеристики</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
             </td>
         </tr>
 }
