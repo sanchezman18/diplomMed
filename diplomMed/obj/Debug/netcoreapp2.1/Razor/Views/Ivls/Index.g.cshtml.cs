@@ -173,7 +173,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1346, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a1b9e3fdcb4435e88873d9fa6cace3b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a6d3b9969404a8e988df6c24a3ba559", async() => {
                 BeginContext(1391, 8, true);
                 WriteLiteral("Изменить");
                 EndContext();
@@ -208,7 +208,7 @@ using diplomMed.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1423, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76ee8f3a8fbe43b38f23eba7b91ac0ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3771bee4ddd146f096abdfd2bc2685b2", async() => {
                 BeginContext(1471, 13, true);
                 WriteLiteral("Храктеристики");
                 EndContext();
@@ -243,7 +243,7 @@ using diplomMed.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1508, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a016f9079d4240c7b7cdd7fff0aa5071", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "083d01eb989643c7a703bbef886ca968", async() => {
                 BeginContext(1555, 7, true);
                 WriteLiteral("Удалить");
                 EndContext();

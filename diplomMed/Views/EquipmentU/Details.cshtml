@@ -4,23 +4,34 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Характеристики</h2>
+<h2>Характеристики @Html.DisplayFor(model => model.Equip.Developer) @Html.DisplayFor(model => model.Equip.Model) </h2>
 
 <div >
     
     <hr />
     <dl class="details-content">
-        
+        <dt>
+           Вид прибора:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Equip.EquipType)
+        </dd>
+
         @if (Model.Equip.Defs != null)
         {
-            
-            <dt >
+            <!-- <dt>
+            Вид прибора:
+         </dt>
+         <dd>
+             Html.DisplayFor(model => model.Equip.EquipType)
+         </dd>-->
+            <dt>
                 @Html.DisplayNameFor(model => model.Equip.Defs.Manual)
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Equip.Defs.Manual)
             </dd>
-            <dt >
+            <dt>
                 @Html.DisplayNameFor(model => model.Equip.Defs.Auto)
             </dt>
             <dd>
@@ -68,7 +79,7 @@
             <dd>
                 @Html.DisplayFor(model => model.Equip.Defs.Size)
             </dd>
-      
+
         }
 
         else if (Model.Equip.Ekgs != null)
@@ -193,7 +204,7 @@
             </dd>
 
         }
-       else if  (Model.Equip.Stretchers != null)
+        else if (Model.Equip.Stretchers != null)
         {
             <dt>
                 @Html.DisplayNameFor(model => model.Equip.Stretchers.WorkingCondition)
@@ -209,38 +220,38 @@
             </dd>
         }
         else
-        {   
-           <dt>Комплект дыхательный</dt>
-           <dd>1 коплект</dd>
-           <dt>Комплект вохдуховодов</dt>
-           <dd>1 комлект(не менее 3 шт., разных размеров)</dd>
-           <dt>Ларингоскоп</dt>
-           <dd>1 шт.</dd>
-           <dt>Трубка эндотрахеальня</dt>   
-           <dd>3 шт.</dd>
-           <dt>Стилет для интубации</dt>
-           <dd>2 шт</dd>
-           <dt>Роторасширитель</dt>
-           <dd>1 шт.</dd>
-           <dt>Языкодержатель</dt>
-           <dd>1 шт.</dd>
-           <dt>Зажим кровоостанавливающий</dt>
-           <dd>2 шт.</dd>
-           <dt>Зонд желудочный</dt>
-           <dd>1 шт.</dd>
-           <dt>Бинт Марлевый </dt>
-           <dd>2 шт. (10 см)</dd>
-           <dt>Салфетки марлевые</dt>
-           <dd>2 упаковки (16см х 14см)</dd>
-           <dt>Жгут кровоостанавливающий</dt>
-           <dd>1 шт.</dd>
-           <dt>Шприц типа Жане</dt>
-           <dd>1 шт.</dd>
-           <dt>Канюля для вен</dt>
-           <dd>4 шт.</dd>
-           <dt>Жгут для инъекций</dt>
-           <dd>2 шт.</dd>
-            
+        {
+            <dt>Комплект дыхательный</dt>
+            <dd>1 коплект</dd>
+            <dt>Комплект вохдуховодов</dt>
+            <dd>1 комлект(не менее 3 шт., разных размеров)</dd>
+            <dt>Ларингоскоп</dt>
+            <dd>1 шт.</dd>
+            <dt>Трубка эндотрахеальня</dt>
+            <dd>3 шт.</dd>
+            <dt>Стилет для интубации</dt>
+            <dd>2 шт</dd>
+            <dt>Роторасширитель</dt>
+            <dd>1 шт.</dd>
+            <dt>Языкодержатель</dt>
+            <dd>1 шт.</dd>
+            <dt>Зажим кровоостанавливающий</dt>
+            <dd>2 шт.</dd>
+            <dt>Зонд желудочный</dt>
+            <dd>1 шт.</dd>
+            <dt>Бинт Марлевый </dt>
+            <dd>2 шт. (10 см)</dd>
+            <dt>Салфетки марлевые</dt>
+            <dd>2 упаковки (16см х 14см)</dd>
+            <dt>Жгут кровоостанавливающий</dt>
+            <dd>1 шт.</dd>
+            <dt>Шприц типа Жане</dt>
+            <dd>1 шт.</dd>
+            <dt>Канюля для вен</dt>
+            <dd>4 шт.</dd>
+            <dt>Жгут для инъекций</dt>
+            <dd>2 шт.</dd>
+
         }
 
 

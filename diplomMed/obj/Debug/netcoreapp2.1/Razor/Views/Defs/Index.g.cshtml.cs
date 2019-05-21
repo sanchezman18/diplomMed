@@ -293,7 +293,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n            </td>\r\n            <!--  <td>\r\n          Html.DisplayFor(modelItem => item.Equip.Id)\r\n      </td>-->\r\n           \r\n            <td>\r\n                ");
             EndContext();
             BeginContext(2651, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "124f9a1779414939bf07e015d357c803", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccf5a54f426f4cc9955a2a52cacd17b4", async() => {
                 BeginContext(2696, 8, true);
                 WriteLiteral("Изменить");
                 EndContext();
@@ -328,7 +328,7 @@ using diplomMed.Models;
             WriteLiteral(" \r\n                ");
             EndContext();
             BeginContext(2727, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51274afb72db41469040984526004aa8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "596375f17c824d0ca2e5b1e4f97e0308", async() => {
                 BeginContext(2775, 14, true);
                 WriteLiteral("Характеристики");
                 EndContext();
@@ -363,7 +363,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(2811, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddc9004c5dd14230b1aee7b9994e1921", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4a70acff64c44479e1dadc3ffc82bc0", async() => {
                 BeginContext(2858, 7, true);
                 WriteLiteral("Удалить");
                 EndContext();

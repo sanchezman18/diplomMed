@@ -71,9 +71,9 @@ using diplomMed.Models;
             WriteLiteral("\r\n<h2>Добро пожаловать</h2>\r\n<div>\r\n    <ul class=\"cat-content\" >\r\n        <li >\r\n            ");
             EndContext();
             BeginContext(139, 172, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b8eb50b8c4e49f19d4a6ecde33b8dfa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8da35095bd954da686dcc8cabdf9ce64", async() => {
                 BeginContext(248, 59, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c1d5b7a6437843b9900a4bebcb3ebcba", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "71531e6a5b0f4ff0ba0d93e9c04c5128", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -117,7 +117,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(325, 135, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d025d77ad7504a27b3523044b6c4b073", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "683ef5bc5dba4090800d6403ff7130a9", async() => {
                 BeginContext(434, 22, true);
                 WriteLiteral("<h3>АСМП класса A</h3>");
                 EndContext();
@@ -149,12 +149,12 @@ using diplomMed.Models;
             WriteLiteral("\r\n        </li>\r\n        <li>\r\n            ");
             EndContext();
             BeginContext(503, 172, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3dc3928c8adf4fcfa828673479db6615", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5397b7275c904235a44c7a4a2c702c6a", async() => {
                 BeginContext(612, 1, true);
                 WriteLiteral(" ");
                 EndContext();
                 BeginContext(613, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "843330eb49aa43f79237897822944566", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8472583f37e74d47b3c5b79a05e1c5b8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -198,7 +198,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(689, 135, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bcd0f7b952944a36a0a7669257c22af7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "440ee4f0dbe04a9aabb08b61751eaa4c", async() => {
                 BeginContext(798, 22, true);
                 WriteLiteral("<h3>АСМП класса B</h3>");
                 EndContext();
@@ -230,9 +230,9 @@ using diplomMed.Models;
             WriteLiteral("\r\n        </li>\r\n        <li>\r\n            ");
             EndContext();
             BeginContext(867, 172, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5bc0d579b55040338527acb241e42bbe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a57f7dc09c514286a75e4ec8463b818c", async() => {
                 BeginContext(977, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d2687f67824c4e0ca0c5810d85d46a13", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "645ffa65d771492893b6b0fa10d2d35d", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -276,7 +276,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n           ");
             EndContext();
             BeginContext(1052, 135, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820486b3975842e1938d84fcb37f3d3f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2536f9e0da944c7aa27b2b2af84f6a0", async() => {
                 BeginContext(1161, 22, true);
                 WriteLiteral("<h3>АСМП класса С</h3>");
                 EndContext();

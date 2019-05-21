@@ -133,7 +133,7 @@ using diplomMed.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(978, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85e5b21a7ebb4078aa88c7ca99617868", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "082249c9ed2e4722a9c6dd49eaf83949", async() => {
                 BeginContext(1023, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -168,7 +168,7 @@ using diplomMed.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1051, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b616adbab164d91887045dbdc92b958", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92aa291050be4e3d844b5be355ca1f5e", async() => {
                 BeginContext(1099, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -203,7 +203,7 @@ using diplomMed.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1130, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "317daca9914d473c975f585bb9ab9e9e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae70d8707eac49cfaeef9c41045a3e6a", async() => {
                 BeginContext(1177, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
